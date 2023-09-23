@@ -5,7 +5,9 @@
 [![GitHub Issues](https://img.shields.io/github/issues/yaoyaochil/wechat-components.svg)](https://github.com/yaoyaochil/wechat-components/issues)
 [![GitHub Forks](https://img.shields.io/github/forks/yaoyaochil/wechat-components.svg)](https://github.com/yaoyaochil/wechat-components/network)
 
-![项目截图](screenshot.png)
+![项目截图](./img/wechat-menu.png)
+![项目截图](./img/wechat-menu1.png)
+![项目截图](./img/wechat-menu2.png)
 
 ## 项目简介
 
@@ -23,7 +25,28 @@ Wechat-Components 是一个使用 Vite、Vue 3、Element-Plus UI 和 TypeScript 
 你可以通过以下命令安装 Wechat-Components：
 
 ```bash
+# 目前还没有上线npm 后续期待
 npm install wechat-components-yyc
+```
+
+## 使用
+```vue
+<template>
+  <wechat-menu @submitMenuData="getMenu"></wechat-menu>
+</template>
+
+<script setup lang="ts">
+import wechatMenu from '@/components/wechat-menu.vue'
+
+// 监听获取菜单数据
+const getMenu = (data: any) => {
+  console.log(data)
+}
+</script>
+
+
+<style scoped>
+</style>
 ```
 
 ## 贡献
